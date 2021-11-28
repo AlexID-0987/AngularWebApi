@@ -20,5 +20,11 @@ export class ApikeyComponent implements OnInit {
     this.http.get<Apiresp[]>(this.url)
     .subscribe(a=>this.reaponse=a)
   }
+  add(){
+    this.reaponse.push({userId:345,id:345,title:'Alex',body:'alex clar'})
+  }
+  delete(){
+    this.reaponse.pop()
+  }
 
 }
